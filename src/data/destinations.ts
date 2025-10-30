@@ -149,7 +149,7 @@ export const destinations: Destination[] = [
           "Guided cultural interactions",
         ],
         image:
-          "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80",
       },
     ],
   },
@@ -186,7 +186,7 @@ export const destinations: Destination[] = [
           "Dochula 108 chortens visit",
         ],
         image:
-          "https://images.unsplash.com/photo-1559112094-4137e19ff3a5?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80",
       },
     ],
   },
