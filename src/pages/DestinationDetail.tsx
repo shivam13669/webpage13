@@ -579,10 +579,11 @@ const destinationGalleryMap: Record<string, string[]> = {
     "https://images.unsplash.com/photo-1549989476-69a92fa57c4e?auto=format&fit=crop&w=1600&q=80",
   ],
   zanskar: [
-    "https://images.unsplash.com/photo-1489515217757-5ff91ff88c8d?auto=format&fit=crop&w=1600&q=80",
-    "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
-    "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1512238701577-f182d9ef8af7?auto=format&fit=crop&w=1600&q=80",
     "https://images.unsplash.com/photo-1493815793585-d94ccbc86df0?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1516131206008-dd041a9764fd?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1542401886-65d27afda266?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1486870591958-9b9d7d1dda99?auto=format&fit=crop&w=1600&q=80",
   ],
 };
 
