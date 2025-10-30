@@ -227,8 +227,8 @@ const TestimonialsPage = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-sm leading-relaxed text-muted-foreground">{story.quote}</p>
-                  <div className="flex items-center justify-between text-xs font-medium text-primary">
-                    <span>{"★".repeat(story.rating)}{"☆".repeat(5 - story.rating)}</span>
+                  <div className="flex items-center justify-between text-xs font-medium">
+                    <span className="text-yellow-400">{"★".repeat(story.rating)}{"☆".repeat(5 - story.rating)}</span>
                     <span className="rounded-full bg-primary/10 px-3 py-1 text-primary/80">
                       {story.highlight}
                     </span>
@@ -310,18 +310,23 @@ const TestimonialsPage = () => {
                     </div>
                     <div className="space-y-3">
                       <Label className="block">Rating</Label>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1 cursor-pointer">
                         {[1, 2, 3, 4, 5].map((value) => (
-                          <Button
+                          <span
                             key={value}
-                            type="button"
-                            variant={value <= rating ? "default" : "outline"}
-                            className="h-10 w-10 rounded-full p-0"
+                            className="text-2xl text-yellow-400 cursor-pointer transition-transform hover:scale-110"
                             onClick={() => setRating(value)}
+                            role="button"
+                            tabIndex={0}
                             aria-label={`Rate ${value} star${value > 1 ? "s" : ""}`}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter" || e.key === " ") {
+                                setRating(value);
+                              }
+                            }}
                           >
                             {value <= rating ? "★" : "☆"}
-                          </Button>
+                          </span>
                         ))}
                       </div>
                       <input type="hidden" name="rating" value={rating} />
