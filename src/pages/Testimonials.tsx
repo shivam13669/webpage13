@@ -310,20 +310,23 @@ const TestimonialsPage = () => {
                     </div>
                     <div className="space-y-3">
                       <Label className="block">Rating</Label>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1 cursor-pointer">
                         {[1, 2, 3, 4, 5].map((value) => (
-                          <Button
+                          <span
                             key={value}
-                            type="button"
-                            variant={value <= rating ? "default" : "outline"}
-                            className={`h-10 w-10 rounded-full p-0 ${
-                              value <= rating ? "bg-yellow-400 hover:bg-yellow-500 text-black" : ""
-                            }`}
+                            className="text-2xl text-yellow-400 cursor-pointer transition-transform hover:scale-110"
                             onClick={() => setRating(value)}
+                            role="button"
+                            tabIndex={0}
                             aria-label={`Rate ${value} star${value > 1 ? "s" : ""}`}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter" || e.key === " ") {
+                                setRating(value);
+                              }
+                            }}
                           >
                             {value <= rating ? "★" : "☆"}
-                          </Button>
+                          </span>
                         ))}
                       </div>
                       <input type="hidden" name="rating" value={rating} />
