@@ -314,7 +314,7 @@ const TestimonialsPage = () => {
                         {[1, 2, 3, 4, 5].map((value) => (
                           <span
                             key={value}
-                            className="text-5xl text-yellow-400 cursor-pointer transition-transform hover:scale-110"
+                            className="text-3xl text-yellow-400 cursor-pointer transition-transform hover:scale-110"
                             onClick={() => setRating(value)}
                             role="button"
                             tabIndex={0}
