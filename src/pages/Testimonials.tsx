@@ -228,7 +228,7 @@ const TestimonialsPage = () => {
                 <CardContent className="space-y-4">
                   <p className="text-sm leading-relaxed text-muted-foreground">{story.quote}</p>
                   <div className="flex items-center justify-between text-xs font-medium">
-                    <span className="text-yellow-400">{"★".repeat(story.rating)}{"☆".repeat(5 - story.rating)}</span>
+                    <span className="text-2xl text-yellow-400">{"★".repeat(story.rating)}{"☆".repeat(5 - story.rating)}</span>
                     <span className="rounded-full bg-primary/10 px-3 py-1 text-primary/80">
                       {story.highlight}
                     </span>
@@ -314,7 +314,7 @@ const TestimonialsPage = () => {
                         {[1, 2, 3, 4, 5].map((value) => (
                           <span
                             key={value}
-                            className="text-2xl text-yellow-400 cursor-pointer transition-transform hover:scale-110"
+                            className="text-5xl text-yellow-400 cursor-pointer transition-transform hover:scale-110"
                             onClick={() => setRating(value)}
                             role="button"
                             tabIndex={0}
