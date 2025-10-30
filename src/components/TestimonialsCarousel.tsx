@@ -151,7 +151,7 @@ const TestimonialsCarousel: React.FC = () => {
                   {Array.from({ length: 5 }).map((_, i) => (
                     <span
                       key={i}
-                      className={`text-xl ${
+                      className={`text-3xl ${
                         i < currentTestimonial.rating
                           ? "text-yellow-400"
                           : "text-muted-foreground/30"
