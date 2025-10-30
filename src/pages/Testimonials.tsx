@@ -227,8 +227,8 @@ const TestimonialsPage = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-sm leading-relaxed text-muted-foreground">{story.quote}</p>
-                  <div className="flex items-center justify-between text-xs font-medium text-primary">
-                    <span>{"★".repeat(story.rating)}{"☆".repeat(5 - story.rating)}</span>
+                  <div className="flex items-center justify-between text-xs font-medium">
+                    <span className="text-yellow-400">{"★".repeat(story.rating)}{"☆".repeat(5 - story.rating)}</span>
                     <span className="rounded-full bg-primary/10 px-3 py-1 text-primary/80">
                       {story.highlight}
                     </span>
@@ -316,7 +316,9 @@ const TestimonialsPage = () => {
                             key={value}
                             type="button"
                             variant={value <= rating ? "default" : "outline"}
-                            className="h-10 w-10 rounded-full p-0"
+                            className={`h-10 w-10 rounded-full p-0 ${
+                              value <= rating ? "bg-yellow-400 hover:bg-yellow-500 text-black" : ""
+                            }`}
                             onClick={() => setRating(value)}
                             aria-label={`Rate ${value} star${value > 1 ? "s" : ""}`}
                           >
